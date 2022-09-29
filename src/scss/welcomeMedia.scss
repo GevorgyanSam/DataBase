@@ -1,0 +1,84 @@
+
+@media only screen and (max-width: 1000px) {
+
+    .animationParent {
+
+        h2, h3 {
+            font-size: 50px !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 660px) {
+
+    .animationParent {
+
+        h2, h3 {
+            font-size: 40px !important;
+            line-height: 60px !important;
+        }
+    }
+
+    .navParent {
+        height: 70px !important;
+
+        .navChild {
+
+            .logout {
+                width: 100px !important;
+            }
+
+            h2 {
+                font-size: 18px !important;
+            }
+
+            h3 {
+                font-size: 16px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+    .animationParent {
+
+        h2, h3 {
+            font-size: 30px !important;
+            line-height: 50px !important;
+        }
+    }
+
+    .navParent {
+
+        .navChild {
+
+            .logout {
+                width: 90px !important;
+            }
+
+            h2 {
+                font-size: 16px !important;
+            }
+
+            h3 {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .animationParent {
+
+        h2, h3 {
+            font-size: 25px !important;
+            line-height: 40px !important;
+        }
+    }
+
+}

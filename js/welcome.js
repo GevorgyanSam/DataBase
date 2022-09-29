@@ -1,0 +1,1 @@
+"use strict";$(document).ready((function(){$(".animationParent").delay(4e3).fadeOut(0,(function(){$(".documentParent").css({display:"block"})}))}));

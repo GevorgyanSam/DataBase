@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@200&display=swap');
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --font-family-2: 'Montserrat', sans-serif;
+    --color: rgba(255, 255, 255, 0.55);
+    --secondary-color: black;
+    --hover-color: rgb(86, 116, 204);
+    --transition: .5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style-type: none;
+}
+
+body {
+    user-select: none;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/background.jpg);
+}
+
+.animationParent {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999999;
+
+    > div {
+        transform: translateY(-50%);
+
+        h2, h3 {
+            color: var(--color);
+            font-size: 60px;
+            font-family: var(--font-family-2);
+            font-weight: 400;
+            letter-spacing: 5px;
+            line-height: 85px;
+            text-transform: capitalize;
+            transform: translateY(-100px);
+            opacity: 0;
+
+            @keyframes HeaderAnimation {
+
+                0% {
+                    transform: translateY(-80px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+            }
+
+            @keyframes Out {
+
+                0% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(80px);
+                    opacity: 0;
+                }
+
+            }
+        }
+
+        h2 {
+            animation: HeaderAnimation 1.5s forwards ease .5s, Out 1s forwards 3s;
+        }
+
+        h3 {
+            animation: HeaderAnimation 1.5s forwards ease 1s, Out 1s forwards 3s;
+        }
+    }
+}
+
+.documentParent {
+    display: none;
+}
+
+.navParent {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-90px);
+    animation: navAnim 1s forwards ease;
+
+    @keyframes navAnim {
+
+        0% {
+            opacity: 0;
+            transform: translateY(-90px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 1px;
+        width: 0%;
+        animation: navBottom 1s forwards .5s ease;
+
+        @keyframes navBottom {
+
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+
+        }
+    }
+
+    .navChild {
+        
+        h2, h3 {
+            color: var(--color);
+            font-family: var(--font-family);
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 21px;
+        }
+
+        .logout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            width: 110px;
+            cursor: pointer;
+            position: relative;
+
+            &:hover::after {
+                width: 105%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(255, 255, 255, 0.3);
+                height: 1px;
+                width: 0%;
+                transition: var(--transition);
+            }
+
+            i {
+                color: var(--color);
+            }
+
+            h3 {
+                font-size: 19px;
+            }
+        }
+    }
+}
