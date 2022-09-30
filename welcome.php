@@ -1,7 +1,10 @@
-<?php require "config.php"; ?>
-
 <?php
     session_start();
+
+    if(!isset($_SESSION["name"]) && !isset($_SESSION["lastname"])) {
+        header("Location: index.php");
+    }
+
     $Name = $_SESSION["name"];
     $LastName = $_SESSION["lastname"];
 ?>
@@ -32,10 +35,12 @@
                         <h2>Website Logo</h2>
                     </div>
                     <div class="navChild">
+                        <a href="logout.php">
                         <div class="logout">
                             <h3>Log Out</h3>
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                         </div>
+                        </a>
                     </div>
                 </div>
             </nav>

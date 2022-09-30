@@ -4,6 +4,12 @@
 
     session_start();
 
+    error_reporting(0);
+
+    if(isset($_SESSION["name"]) && isset($_SESSION["lastname"])) {
+        header("Location: welcome.php");
+    }
+
     if($_SERVER["REQUEST_METHOD"] === "POST") {
         $Login = $_POST["login"];
         $Password = md5($_POST["password"]);
@@ -41,11 +47,11 @@
                 <form action="" method="post" autocomplete="off">
                     <div class="login">
                         <i class="fa-regular fa-user" id="loginIcon"></i>
-                        <input type="text" placeholder="Login" id="login" name="login">
+                        <input type="text" placeholder="Login" id="login" name="login" value="<?php echo $Login ?>">
                     </div>
                     <div class="password">
                         <i class="fa-solid fa-lock" id="passwordIcon"></i>
-                        <input type="password" placeholder="Password" id="password" name="password">
+                        <input type="password" placeholder="Password" id="password" name="password" value="<?php echo $_POST["password"] ?>">
                         <i class="fa-regular fa-eye-slash" id="eye"></i>
                     </div>
                     <div class="submit">
