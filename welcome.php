@@ -30,6 +30,17 @@
     </div>
     <div class="documentParent">
         <header>
+
+
+
+
+
+                                        <!-- Navigation -->
+
+
+
+
+
             <nav>
                 <div class="navParent">
                     <div class="navChild">
@@ -45,6 +56,17 @@
                     </div>
                 </div>
             </nav>
+
+
+
+
+
+                                        <!-- Home -->
+
+
+
+
+                                        
             <div class="homeParent">
                 <div class="homeContent">
                     <a href="#portfolio">
@@ -56,6 +78,17 @@
             </div>
         </header>
         <main>
+
+
+
+
+
+                                        <!-- Portfolio -->
+
+
+
+
+                                        
             <section id="portfolio">
                 <div class="portfolioParent">
                     <div class="portfolioHeaderParent">
@@ -64,7 +97,7 @@
                     <div class="gridParent">
                         <div class="gridChild news1">
                             <a href="#">
-                                <img class="gridImg" src="https://travellersworldwide.com/wp-content/uploads/2022/04/shutterstock_245778223.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio1.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>Mexico</h2>
@@ -75,7 +108,7 @@
                         </div>
                         <div class="gridChild news2">
                             <a href="#">
-                                <img class="gridImg" src="https://gdb.voanews.com/148CB728-5E6B-4A7A-86DF-22E4F0597D0F_w1200_r1.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio2.webp" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>USA New York</h2>
@@ -86,7 +119,7 @@
                         </div>
                         <div class="gridChild news3">
                             <a href="#">
-                                <img class="gridImg" src="https://www.commonwealthfund.org/sites/default/files/styles/countries_hero_desktop/public/country_image_Canada.jpg?h=f2fcf546&itok=tfGdKLUg" alt="">
+                                <img class="gridImg" src="img/portfolio3.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>Canada</h2>
@@ -97,7 +130,7 @@
                         </div>
                         <div class="gridChild news4">
                             <a href="#">
-                                <img class="gridImg" src="http://london.com/wp-content/uploads/2017/04/London-Bridge-and-Big-Ben-at-Night-1-1-2.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio4.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>London</h2>
@@ -108,7 +141,7 @@
                         </div>
                         <div class="gridChild news5">
                             <a href="#">
-                                <img class="gridImg" src="https://worldstrides.com/wp-content/uploads/2017/06/France_Mediterranean_Spain-min.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio5.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>France</h2>
@@ -119,7 +152,7 @@
                         </div>
                         <div class="gridChild news6">
                             <a href="#">
-                                <img class="gridImg" src="https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-church-of-the-savior-on-spilled-blood-503257072-7640c6e055374240b7e6cb9033a6ec81.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio6.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>Russia</h2>
@@ -130,7 +163,7 @@
                         </div>
                         <div class="gridChild news7">
                             <a href="#">
-                                <img class="gridImg" src="https://media.nomadicmatt.com/2022/koreaguide1.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio7.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>Korea</h2>
@@ -141,7 +174,7 @@
                         </div>
                         <div class="gridChild news8">
                             <a href="#">
-                                <img class="gridImg" src="https://i.ytimg.com/vi/Hx1MpIwZHRQ/maxresdefault.jpg" alt="">
+                                <img class="gridImg" src="img/portfolio8.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
                                         <h2>China</h2>
