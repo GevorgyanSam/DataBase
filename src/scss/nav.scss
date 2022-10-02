@@ -1,0 +1,115 @@
+.navParent.active {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.navParent {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    transition: var(--transition);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    position: fixed;
+    opacity: 0;
+    z-index: 99999;
+    transform: translateY(-90px);
+    animation: navAnim 1s forwards ease;
+
+    @keyframes navAnim {
+        0% {
+            opacity: 0;
+            transform: translateY(-90px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .navChild {
+        h2,
+        h3 {
+            color: var(--color);
+            font-family: var(--font-family);
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 21px;
+        }
+        .logout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            width: 110px;
+            cursor: pointer;
+            position: relative;
+            &:hover::after {
+                width: 105%;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(255, 255, 255, 0.3);
+                height: 1px;
+                width: 0%;
+                transition: var(--transition);
+            }
+            i {
+                color: var(--color);
+            }
+            h3 {
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .navParent {
+        height: 70px !important;
+
+        .navChild {
+
+            .logout {
+                width: 100px !important;
+            }
+
+            h2 {
+                font-size: 18px !important;
+            }
+
+            h3 {
+                font-size: 16px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+    .navParent {
+
+        .navChild {
+
+            .logout {
+                width: 90px !important;
+            }
+
+            h2 {
+                font-size: 16px !important;
+            }
+
+            h3 {
+                font-size: 14px !important;
+            }
+        }
+    }
+   
+}
