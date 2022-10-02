@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@200&display=swap');
+
 :root {
     --font-family: 'Poppins', sans-serif;
     --font-family-2: 'Montserrat', sans-serif;
     --color: rgba(255, 255, 255, 0.55);
     --secondary-color: black;
-    --hover-color: rgb(86, 116, 204);
     --transition: .5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none !important;       
 }
 
 * {
@@ -36,10 +44,11 @@ body {
     justify-content: center;
     text-align: center;
     z-index: 999999;
+
     >div {
         transform: translateY(-50%);
-        h2,
-        h3 {
+
+        h2, h3 {
             color: var(--color);
             font-size: 60px;
             font-family: var(--font-family-2);
@@ -49,6 +58,7 @@ body {
             text-transform: capitalize;
             transform: translateY(-100px);
             opacity: 0;
+
             @keyframes HeaderAnimation {
                 0% {
                     transform: translateY(-80px);
@@ -59,6 +69,7 @@ body {
                     opacity: 1;
                 }
             }
+
             @keyframes Out {
                 0% {
                     transform: translateY(0);
@@ -83,17 +94,25 @@ body {
     display: none;
 }
 
+.navParent.active {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+}
+
 .navParent {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    transition: var(--transition);
     height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    position: relative;
+    position: fixed;
     opacity: 0;
+    z-index: 99999;
     transform: translateY(-90px);
     animation: navAnim 1s forwards ease;
+
     @keyframes navAnim {
         0% {
             opacity: 0;
@@ -104,25 +123,7 @@ body {
             transform: translateY(0);
         }
     }
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(255, 255, 255, 0.3);
-        height: 1px;
-        width: 0%;
-        animation: navBottom 1s forwards .5s ease;
-        @keyframes navBottom {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 90%;
-            }
-        }
-    }
+
     .navChild {
         h2,
         h3 {
@@ -161,5 +162,187 @@ body {
                 font-size: 19px;
             }
         }
+    }
+}
+
+.homeParent {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .homeContent {
+        transform: translateY(-50%);
+
+        h1 {
+            color: var(--color);
+            font-family: var(--font-family-2);
+            font-weight: 400;
+            font-size: 60px;
+            letter-spacing: 3px;
+            animation: HomeContentAnim 1s forwards .5s;
+            transform: translateY(-60px);
+            opacity: 0;
+
+            @keyframes HomeContentAnim {
+
+                0% {
+                    transform: translateY(-60px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+            }
+        }
+    }
+}
+
+#portfolio {
+    width: 100%;
+    padding-top: 120px;
+    margin-top: -120px;
+}
+
+.portfolioHeaderParent {
+    margin-bottom: 60px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 150px;
+        background-color: var(--color);
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    &::before {
+        left: 30%;
+    }
+
+    &::after {
+        right: 30%;
+    }
+
+    h1 {
+        text-align: center;
+        color: var(--color);
+        font-family: var(--font-family-2);
+        font-size: 55px;
+        font-weight: 400;
+        letter-spacing: 3px;
+    }
+}
+
+.gridParent {
+    height: 1500px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+    .gridChild {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            object-fit: cover;
+            object-position: 50% 50%;
+            height: 100%;
+            width: 100%;
+        }
+
+        span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            &:hover .gridContent {
+                bottom: 30px;
+            }
+
+            .gridContent {
+                position: absolute;
+                left: 30px;
+                bottom: -100px;
+                transition: var(--transition);
+
+                h2 {
+                    color: var(--color);
+                    font-family: var(--font-family-2);
+                    letter-spacing: 2px;
+                    font-size: 35px;
+                    font-weight: 400;
+                }
+
+                p {
+                    color: var(--color);
+                    margin-top: 10px;
+                    font-family: var(--font-family);
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    .news1 {
+        grid-row: 1 / span 4;
+        grid-column: 1 / span 1;
+    }
+
+    .news2 {
+        grid-row: 1 / span 2;
+        grid-column: 2 / span 1;
+    }
+
+    .news3 {
+        grid-row: 1 / span 2;
+        grid-column: 3 / span 2;
+    }
+
+    .news4 {
+        grid-row: 3 / span 2;
+        grid-column: 2 / span 2;
+    }
+
+    .news5 {
+        grid-row: 3 / span 3;
+        grid-column: 4 / span 1;
+    }
+
+    .news6 {
+        grid-row: 5 / span 3;
+        grid-column: 1 / span 2;
+    }
+
+    .news7 {
+        grid-row: 5 / span 3;
+        grid-column: 3 / span 1;
+    }
+
+    .news8 {
+        grid-row: 6 / span 2;
+        grid-column: 4 / span 1;
     }
 }

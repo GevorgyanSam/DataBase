@@ -20,6 +20,7 @@
             $row = mysqli_fetch_assoc($result);
             $_SESSION["name"] = $row["name"];
             $_SESSION["lastname"] = $row["lastname"];
+            $_SESSION["login"] = $row["username"];
             header("Location: welcome.php");
         }
     }
