@@ -93,7 +93,7 @@
                             </a>
                         </div>
                         <div class="gridChild news2">
-                            <a href="#" target="_blank">
+                            <a href="usa.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio2.webp" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -104,7 +104,7 @@
                             </a>
                         </div>
                         <div class="gridChild news3">
-                            <a href="#" target="_blank">
+                            <a href="canada.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio3.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -115,7 +115,7 @@
                             </a>
                         </div>
                         <div class="gridChild news4">
-                            <a href="#" target="_blank">
+                            <a href="london.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio4.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -126,7 +126,7 @@
                             </a>
                         </div>
                         <div class="gridChild news5">
-                            <a href="#" target="_blank">
+                            <a href="france.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio5.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -137,7 +137,7 @@
                             </a>
                         </div>
                         <div class="gridChild news6">
-                            <a href="#" target="_blank">
+                            <a href="russia.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio6.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -148,7 +148,7 @@
                             </a>
                         </div>
                         <div class="gridChild news7">
-                            <a href="#" target="_blank">
+                            <a href="korea.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio7.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -159,7 +159,7 @@
                             </a>
                         </div>
                         <div class="gridChild news8">
-                            <a href="#" target="_blank">
+                            <a href="china.php" target="_blank">
                                 <img class="gridImg" src="img/portfolio8.jpg" alt="">
                                 <span>
                                     <div class="gridContent">
@@ -196,7 +196,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="usa.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>USA</h1>
@@ -207,7 +207,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="canada.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>Canada</h1>
@@ -218,7 +218,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="london.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>London</h1>
@@ -229,7 +229,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="france.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>France</h1>
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="russia.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>Russia</h1>
@@ -251,7 +251,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="korea.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>Korea</h1>
@@ -262,7 +262,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="china.php" target="_blank">
                         <div class="newsChild">
                             <div class="newsHeader">
                                 <h1>China</h1>
