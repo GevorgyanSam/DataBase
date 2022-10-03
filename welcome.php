@@ -172,6 +172,109 @@
                     </div>
                 </div>
             </section>
+
+
+
+
+
+                                        <!-- News -->
+
+
+
+
+                                        
+            <section id="news">
+                <div class="newsParent">
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>Mexico</h1>
+                                <p>Mexico News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>President López Obrador has confirmed that an international group of hackers stole thousands of emails from the IT system of the Ministry of National Defense (Sedena).</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>USA</h1>
+                                <p>New York News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>During the building search, a hotel room was found to contain manuals related to the making of explosive devices, as well as materials with the potential to be ...</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>Canada</h1>
+                                <p>Canada News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>Patricia Li's year began with the theft of a Lexus NX 300 from her Toronto home — but that was just the beginning of her troubles. Five months later ...</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>London</h1>
+                                <p>London News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>The first time that long-distance rower Lebby Eyres tried exercising in the gym while wearing a whole-body electrical muscle stimulation (EMS) suit, she says "it felt strange".</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>France</h1>
+                                <p>France News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>UK Chancellor backtracks on controversial plan to cut top tax rate UK government made a U-turn over unpopular proposal to abolish highest tax band after growing backlash over mini-budget.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>Russia</h1>
+                                <p>Russia News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>NATO chief says alliance to give united response to any attack on critical infrastructure Any deliberate attack on critical NATO infrastructure will be met with ...</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>Korea</h1>
+                                <p>Korea News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>After flurry of missile launches, N.Korean media dismiss allies’ moves to sharpen deterrence Propaganda outlets ratchet up attacks on S.Korea’s defense strategy to reinforce alliance’s </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="newsChild">
+                            <div class="newsHeader">
+                                <h1>China</h1>
+                                <p>China News</p>
+                            </div>
+                            <div class="newsContent">
+                                <p>CHENGDU, China, Oct. 2 (Xinhua) -- Chinese men's and women's paddlers both registered their second victories in as many group matches at the World Team Championships here on Sunday.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
