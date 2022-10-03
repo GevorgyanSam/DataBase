@@ -1,0 +1,1 @@
+"use strict";$(document).ready((function(){$(window).scroll((()=>{$(window).scrollTop()>0?$(".navParent").addClass("active"):$(".navParent").removeClass("active"),$(".scroll").css({transform:"translateY("+.35*$(window).scrollTop()+"px)"})}))}));
