@@ -1,7 +1,9 @@
 <nav>
     <div class="navParent">
         <div class="navChild">
-            <h2><?=$Login?></h2>
+            <h2>
+                <a href="create.php">Create News</a>
+            </h2>
         </div>
         <div class="navChild">
             <a href="logout.php">

@@ -182,97 +182,59 @@
 
 
 
-                                        
+
             <section id="news">
                 <div class="newsParent">
-                    <a href="mexico.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>Mexico</h1>
-                                <p>Mexico News</p>
+                    <div class="newsChild">
+                        <div class="contentImage">
+                            <img src="img/portfolio1.jpg">
+                        </div>
+                        <div class="contentMain">
+                            <div>
+                                <h2>Mexico</h2>
                             </div>
-                            <div class="newsContent">
-                                <p>President López Obrador has confirmed that an international group of hackers stole thousands of emails from the IT system of the Ministry of National Defense (Sedena).</p>
+                            <div>
+                                <p>Hackers leak thousands of Defense Ministry documents The leak also revealed details of past security debacles President López Obrador has confirmed that an international group of hackers stole thousands of emails from the IT system of the Ministry of National Defense (Sedena).</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="usa.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>USA</h1>
-                                <p>New York News</p>
+                    </div>
+                    <div class="newsChild">
+                        <div class="contentImage">
+                            <img src="img/portfolio2.webp">
+                        </div>
+                        <div class="contentMain">
+                            <div>
+                                <h2>USA New York</h2>
                             </div>
-                            <div class="newsContent">
-                                <p>During the building search, a hotel room was found to contain manuals related to the making of explosive devices, as well as materials with the potential to be ...</p>
+                            <div>
+                                <p>Man shot dead in New York hotel bomb making materials found in room NEW YORK - Police in Poughkeepsie say a man was shot to death early Sunday in a hotel. A 911 call came in at about 7:30 a.m. of a disturbance at the Courtyard by Marriott on South Road.</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="canada.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>Canada</h1>
-                                <p>Canada News</p>
+                    </div>
+                    <!-- <div class="newsChild">
+                        <div class="contentImage">
+                            <img src="img/portfolio3.jpg">
+                        </div>
+                        <div class="contentMain">
+                            <div>
+                                <h2>Armenian News</h2>
                             </div>
-                            <div class="newsContent">
-                                <p>Patricia Li's year began with the theft of a Lexus NX 300 from her Toronto home — but that was just the beginning of her troubles. Five months later ...</p>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiat perspiciatis, quae blanditiis aut odio sapiente, nemo veniam modi ad facilis nesciunt dolor numquam vero odit quaerat alias. Rerum, vel.</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="london.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>London</h1>
-                                <p>London News</p>
-                            </div>
-                            <div class="newsContent">
-                                <p>The first time that long-distance rower Lebby Eyres tried exercising in the gym while wearing a whole-body electrical muscle stimulation (EMS) suit, she says "it felt strange".</p>
-                            </div>
+                        <div class="settings">
+                            <i class="fa-solid fa-gear"></i>
                         </div>
-                    </a>
-                    <a href="france.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>France</h1>
-                                <p>France News</p>
-                            </div>
-                            <div class="newsContent">
-                                <p>UK Chancellor backtracks on controversial plan to cut top tax rate UK government made a U-turn over unpopular proposal to abolish highest tax band after growing backlash over mini-budget.</p>
-                            </div>
+                        <div class="contentEdit">
+                            <a href="#" class="edit">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+                            <a href="#" class="delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </a>
                         </div>
-                    </a>
-                    <a href="russia.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>Russia</h1>
-                                <p>Russia News</p>
-                            </div>
-                            <div class="newsContent">
-                                <p>NATO chief says alliance to give united response to any attack on critical infrastructure Any deliberate attack on critical NATO infrastructure will be met with ...</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="korea.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>Korea</h1>
-                                <p>Korea News</p>
-                            </div>
-                            <div class="newsContent">
-                                <p>After flurry of missile launches, N.Korean media dismiss allies’ moves to sharpen deterrence Propaganda outlets ratchet up attacks on S.Korea’s defense strategy to reinforce alliance’s </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="china.php" target="_blank">
-                        <div class="newsChild">
-                            <div class="newsHeader">
-                                <h1>China</h1>
-                                <p>China News</p>
-                            </div>
-                            <div class="newsContent">
-                                <p>CHENGDU, China, Oct. 2 (Xinhua) -- Chinese men's and women's paddlers both registered their second victories in as many group matches at the World Team Championships here on Sunday.</p>
-                            </div>
-                        </div>
-                    </a>
+                    </div> -->
                 </div>
             </section>
         </main>

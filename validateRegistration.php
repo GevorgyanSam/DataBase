@@ -1,8 +1,4 @@
 <?php
-    require "config.php";
-?>
-
-<?php
 
     $ErrName = $ErrLastName = $ErrEmail = $ErrUserName = $ErrPassword = $ErrPasswordConfirm = "";
     $Name = $LastName = $Email = $UserName = $Password = $PasswordConfirm = "";

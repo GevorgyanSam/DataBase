@@ -332,96 +332,117 @@ body {
 }
 
 .newsParent {
-    width: 1200px;
+    width: 1300px;
     margin: 150px auto;
     margin-bottom: 50px;
     transition: var(--transition);
 
     .newsChild {
-        height: 200px;
+        transition: var(--transition);
+        height: 300px;
         width: 100%;
+        margin: 10px 0;
         background-color: transparent;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         text-align: start;
         justify-content: flex-start;
-        padding: 25px;
+        padding: 35px;
         position: relative;
-        transition: var(--transition);
+        overflow: hidden;
 
-        &:hover {
-            padding-right: 5px;
-        }
-
-        &:hover .newsHeader {
-            margin-left: 50px;
-        }
-
-        &:hover .newsContent::before {
-            height: 0;
-        }
-
-        &::before,
-        &::after {
+        &::before {
             content: "";
             position: absolute;
-            left: 0;
-            top: 0;
             height: 1px;
             width: 100%;
             background-color: var(--color);
-            transition: var(--transition);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        &::after {
-            display: none;
+        .contentImage {
+            transition: var(--transition);
+            height: 100%;
+            width: 40%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+
+            img {
+                object-fit: cover;
+                object-position: 50% 50%;
+                height: 100%;
+                width: 100%;
+            }
         }
 
-        .newsHeader {
-            margin-left: 30px;
-            width: 20%;
+        .contentMain {
             transition: var(--transition);
+            margin-left: 45px;
+            overflow: hidden;
+            height: 100%;
+            width: 55%;
 
-            h1 {
+            h2 {
+                transition: var(--transition);
                 color: var(--color);
+                font-size: 50px;
                 font-family: var(--font-family-2);
                 font-weight: 400;
-                font-size: 40px;
                 letter-spacing: 2px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            p {
                 transition: var(--transition);
-            }
-
-            p {
-                color: var(--color);
-                font-family: var(--font-family);
-                font-weight: 400;
-                font-size: 23px;
-                letter-spacing: 1px;
-            }
-        }
-
-        .newsContent {
-            transition: var(--transition);
-            padding-left: 30px;
-            width: 80%;
-
-            &::before {
-                content: "";
-                position: absolute;
-                height: 60%;
-                width: 1px;
-                background-color: var(--color);
-                left: 22%;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: .3s;
-            }
-
-            p {
                 color: var(--color);
                 font-size: 18px;
                 letter-spacing: 1px;
                 font-family: var(--font-family);
+                font-weight: 400;
+            }
+        }
+
+        .settings {
+            position: absolute;
+            right: 20px;
+            top: 25px;
+
+            &:hover + .contentEdit {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            i {
+                color: var(--color);
+                font-size: 20px;
+            }
+        }
+
+        .contentEdit {
+            position: absolute;
+            right: 20px;
+            top: 45px;
+            visibility: hidden;
+            transform: translateY(-15px);
+            opacity: 0;
+            transition: .3s;
+
+            a i {
+                font-size: 19px;
+                display: block;
+                margin-top: 20px;
+                color: var(--color);
+            }
+
+            &:hover {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }
