@@ -6,9 +6,6 @@
         header("Location: index.php");
     }
 
-    $Name = $_SESSION["name"];
-    $LastName = $_SESSION["lastname"];
-    $Login = $_SESSION["login"];
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="css/createMedia.css">
     <title>Create News</title>
 </head>
 <body>
@@ -34,7 +32,23 @@
 
 
     <header>
-        <?php require "section/nav.php";?>
+        <nav>
+            <div class="navParent">
+                <div class="navChild">
+                    <h2>
+                        <a href="welcome.php">Back</a>
+                    </h2>
+                </div>
+                <div class="navChild">
+                    <a href="logout.php">
+                    <div class="logout">
+                        <h3>Log Out</h3>
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
 
 
@@ -48,23 +62,33 @@
 
                                         
     <div class="formParent">
-        <form action="config.php" method="POST" enctype="multipart/form-data">
-            <div>
-                <input type="hidden" name="id">
+        <div>
+            <div class="header">
+                <h1>Create</h1>
             </div>
-            <div>
-                <input type="text" name="header" placeholder="Header" value="<?=$header?>">
-            </div>
-            <div>
-                <input type="text" name="description" placeholder="Description" value="<?=$description?>">
-            </div>
-            <div>
-                <input type="file" name="file" accept=".jpg, .jpeg, .png, .webp">
-            </div>
-            <div>
-                <button type="submit" name="create">Create</button>
-            </div>
-        </form>
+            <form action="config.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <div>
+                    <input type="hidden" name="id">
+                </div>
+                <div>
+                    <input type="text" id="header" name="header" placeholder="Header" value="<?=$header?>">
+                    <p class="headerError"><?=$headerErr?></p>
+                </div>
+                <div>
+                    <textarea name="description" id="description" placeholder="Description" value="<?=$description?>"></textarea>
+                    <p class="descriptionError"><?=$descriptionErr?></p>
+                </div>
+                <div class="fileParent">
+                    <label for="file">Select An Image</label>
+                    <input type="file" name="file" id="file" accept=".jpg, .jpeg, .png, .webp">
+                </div>
+                <div>
+                    <button type="submit" name="create">Create</button>
+                </div>
+            </form>
+        </div>
     </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/create.js"></script>
 </body>
 </html>

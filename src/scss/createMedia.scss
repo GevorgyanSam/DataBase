@@ -1,0 +1,51 @@
+
+@media only screen and (max-width: 560px) {
+    
+    .formParent {
+        width: 100% !important;
+
+        &::before,
+        &::after {
+            display: none !important;
+        }
+
+        h1 {
+            font-size: 40px !important;
+        }
+
+        form {
+
+            input[name=header],
+            textarea,
+            input[type=file],
+            .fileParent {
+                width: 340px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+
+    .formParent {
+        width: 100% !important;
+        margin-top: 80px !important;
+        padding: 0 25px !important;
+
+        > div {
+            width: 100% !important;
+        }
+
+        form {
+
+            input[name=header],
+            textarea,
+            input[type=file],
+            .fileParent {
+                width: 100% !important;
+            }
+        }
+    }
+
+}
