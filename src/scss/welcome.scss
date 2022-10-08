@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@200&display=swap');
-
 :root {
     --font-family: 'Poppins', sans-serif;
     --font-family-2: 'Montserrat', sans-serif;
@@ -13,7 +12,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    display: none !important;       
+    display: none !important;
 }
 
 * {
@@ -35,14 +34,9 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/background.jpg);
 }
 
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
 // ----- ----- ----- -----      Welcome Animation      ----- ----- ----- -----  
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
-
 .animationParent {
     height: 100%;
     width: 100%;
@@ -52,11 +46,10 @@ body {
     justify-content: center;
     text-align: center;
     z-index: 999999;
-
     >div {
         transform: translateY(-50%);
-
-        h2, h3 {
+        h2,
+        h3 {
             color: var(--color);
             font-size: 60px;
             font-family: var(--font-family-2);
@@ -66,7 +59,6 @@ body {
             text-transform: capitalize;
             transform: translateY(-100px);
             opacity: 0;
-
             @keyframes HeaderAnimation {
                 0% {
                     transform: translateY(-80px);
@@ -77,7 +69,6 @@ body {
                     opacity: 1;
                 }
             }
-
             @keyframes Out {
                 0% {
                     transform: translateY(0);
@@ -101,25 +92,13 @@ body {
 .documentParent {
     display: none;
 }
-
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
 // ----- ----- ----- -----      Navigation      ----- ----- ----- -----  
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
-
 @import "nav.scss";
-
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
 // ----- ----- ----- -----      Home      ----- ----- ----- -----  
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
-
 .homeParent {
     width: 100%;
     min-height: 100vh;
@@ -127,10 +106,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-
     .homeContent {
         transform: translateY(-50%);
-
         h1 {
             transition: var(--transition);
             color: var(--color);
@@ -141,43 +118,34 @@ body {
             animation: HomeContentAnim 1s forwards .5s;
             transform: translateY(-60px);
             opacity: 0;
-
             @keyframes HomeContentAnim {
-
                 0% {
                     transform: translateY(-60px);
                     opacity: 0;
                 }
-
                 100% {
                     transform: translateY(0);
                     opacity: 1;
                 }
-
             }
         }
     }
 }
 
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
 // ----- ----- ----- -----      Portfolio      ----- ----- ----- -----  
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
-
 #portfolio {
     width: 100%;
     padding-top: 120px;
     margin-top: -120px;
+    margin-bottom: 50px;
 }
 
 .portfolioHeaderParent {
     margin-bottom: 60px;
     position: relative;
     transition: var(--transition);
-
     &::before,
     &::after {
         content: "";
@@ -189,15 +157,12 @@ body {
         top: 50%;
         transition: var(--transition);
     }
-
     &::before {
         left: 30%;
     }
-
     &::after {
         right: 30%;
     }
-
     h1 {
         text-align: center;
         color: var(--color);
@@ -218,20 +183,17 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
     transition: var(--transition);
-
     .gridChild {
         position: relative;
         overflow: hidden;
         border-radius: 10px;
         transition: var(--transition);
-
         img {
             object-fit: cover;
             object-position: 50% 50%;
             height: 100%;
             width: 100%;
         }
-
         span {
             position: absolute;
             bottom: 0;
@@ -240,21 +202,17 @@ body {
             width: 100%;
             background-color: rgba(0, 0, 0, 0.2);
             transition: var(--transition);
-
             &:hover {
                 background-color: rgba(0, 0, 0, 0.6);
             }
-
             &:hover .gridContent {
                 bottom: 30px;
             }
-
             .gridContent {
                 position: absolute;
                 left: 30px;
                 bottom: -100px;
                 transition: var(--transition);
-
                 h2 {
                     color: var(--color);
                     font-family: var(--font-family-2);
@@ -262,7 +220,6 @@ body {
                     font-size: 35px;
                     font-weight: 400;
                 }
-
                 p {
                     color: var(--color);
                     margin-top: 10px;
@@ -274,56 +231,43 @@ body {
             }
         }
     }
-
     .news1 {
         grid-row: 1 / span 4;
         grid-column: 1 / span 1;
     }
-
     .news2 {
         grid-row: 1 / span 2;
         grid-column: 2 / span 1;
     }
-
     .news3 {
         grid-row: 1 / span 2;
         grid-column: 3 / span 2;
     }
-
     .news4 {
         grid-row: 3 / span 2;
         grid-column: 2 / span 2;
     }
-
     .news5 {
         grid-row: 3 / span 3;
         grid-column: 4 / span 1;
     }
-
     .news6 {
         grid-row: 5 / span 3;
         grid-column: 1 / span 2;
     }
-
     .news7 {
         grid-row: 5 / span 3;
         grid-column: 3 / span 1;
     }
-
     .news8 {
         grid-row: 6 / span 2;
         grid-column: 4 / span 1;
     }
 }
 
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
 // ----- ----- ----- -----      News      ----- ----- ----- -----  
-
 // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
-
 #news {
     width: 100%;
     padding-top: 120px;
@@ -336,7 +280,6 @@ body {
     margin: 150px auto;
     margin-bottom: 50px;
     transition: var(--transition);
-
     .newsChild {
         transition: var(--transition);
         height: 300px;
@@ -350,7 +293,6 @@ body {
         padding: 35px;
         position: relative;
         overflow: hidden;
-
         &::before {
             content: "";
             position: absolute;
@@ -361,7 +303,6 @@ body {
             left: 50%;
             transform: translateX(-50%);
         }
-
         .contentImage {
             transition: var(--transition);
             height: 100%;
@@ -369,7 +310,6 @@ body {
             position: relative;
             overflow: hidden;
             border-radius: 5px;
-
             img {
                 object-fit: cover;
                 object-position: 50% 50%;
@@ -377,25 +317,22 @@ body {
                 width: 100%;
             }
         }
-
         .contentMain {
             transition: var(--transition);
             margin-left: 45px;
             overflow: hidden;
             height: 100%;
             width: 55%;
-
             h2 {
                 transition: var(--transition);
                 color: var(--color);
-                font-size: 50px;
+                font-size: 45px;
                 font-family: var(--font-family-2);
                 font-weight: 400;
                 letter-spacing: 2px;
                 margin-top: 10px;
                 margin-bottom: 15px;
             }
-
             p {
                 transition: var(--transition);
                 color: var(--color);
@@ -405,24 +342,20 @@ body {
                 font-weight: 400;
             }
         }
-
         .settings {
             position: absolute;
             right: 20px;
             top: 25px;
-
-            &:hover + .contentEdit {
+            &:hover+.contentEdit {
                 visibility: visible;
                 opacity: 1;
                 transform: translateY(0);
             }
-
             i {
                 color: var(--color);
                 font-size: 20px;
             }
         }
-
         .contentEdit {
             position: absolute;
             right: 20px;
@@ -431,14 +364,12 @@ body {
             transform: translateY(-15px);
             opacity: 0;
             transition: .3s;
-
             a i {
                 font-size: 19px;
                 display: block;
                 margin-top: 20px;
                 color: var(--color);
             }
-
             &:hover {
                 visibility: visible;
                 opacity: 1;

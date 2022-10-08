@@ -2,8 +2,44 @@
 
 <?php
 
+    error_reporting(0);
+
     if(!isset($_SESSION["name"]) && !isset($_SESSION["lastname"])) {
         header("Location: index.php");
+    }
+
+    if(!isset($_GET["edit"])) {
+        $imageLabelName = "Select";
+        $headerLabelName = "Create";
+    }
+
+    if(isset($_GET["edit"])) {
+        $imageLabelName = "Update";
+        $headerLabelName = "Update";
+        $edit_state = true;
+        $id = $_GET["edit"];
+
+        $result = mysqli_query($conn, "SELECT * FROM `news` WHERE `id` = $id");
+        $record = mysqli_fetch_array($result);
+
+        $UpdateHeader = $record["header"];
+        $UpdateDescription = $record["description"];
+        $UpdateFile = $record["file"];
+
+        if(isset($_POST["update"])) {
+
+            $sendAlreadyUpdatedHeader = mysqli_real_escape_string($conn, $_POST["header"]);
+            $sendAlreadyUpdatedDescription = mysqli_real_escape_string($conn, $_POST["description"]);
+            $sendAlreadyUpdatedFile = mysqli_real_escape_string($conn, $_FILES["file"]["name"]);
+
+            $result = mysqli_query($conn, "UPDATE `news` SET `header` = '$sendAlreadyUpdatedHeader', `description` = '$sendAlreadyUpdatedDescription', `file` = '$sendAlreadyUpdatedFile' WHERE `id` = '$id'");
+    
+            if($result) {
+                move_uploaded_file($_FILES["file"]["tmp_name"], "img/$sendAlreadyUpdatedFile");
+                header("Location: welcome.php");
+            }
+
+        }
     }
 
 ?>
@@ -64,26 +100,30 @@
     <div class="formParent">
         <div>
             <div class="header">
-                <h1>Create</h1>
+                <h1><?php echo $headerLabelName; ?></h1>
             </div>
-            <form action="config.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div>
                     <input type="hidden" name="id">
                 </div>
                 <div>
-                    <input type="text" id="header" name="header" placeholder="Header" value="<?=$header?>">
+                    <input type="text" id="header" name="header" placeholder="Header" value="<?php echo $UpdateHeader?>">
                     <p class="headerError"><?=$headerErr?></p>
                 </div>
                 <div>
-                    <textarea name="description" id="description" placeholder="Description" value="<?=$description?>"></textarea>
+                    <textarea name="description" id="description" placeholder="Description"><?php echo $UpdateDescription?></textarea>
                     <p class="descriptionError"><?=$descriptionErr?></p>
                 </div>
                 <div class="fileParent">
-                    <label for="file">Select An Image</label>
+                    <label for="file"><?php echo $imageLabelName ?> An Image</label>
                     <input type="file" name="file" id="file" accept=".jpg, .jpeg, .png, .webp">
                 </div>
                 <div>
-                    <button type="submit" name="create">Create</button>
+                    <?php if($edit_state == false) { ?>
+                        <button type="submit" name="create">Create</button>
+                    <?php } else { ?>
+                        <button type="submit" name="update">Update</button>
+                    <?php } ?>
                 </div>
             </form>
         </div>

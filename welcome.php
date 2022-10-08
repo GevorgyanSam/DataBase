@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    include("config.php") ;
+
+   
 
     if(!isset($_SESSION["name"]) && !isset($_SESSION["lastname"])) {
         header("Location: index.php");
@@ -8,6 +10,7 @@
     $Name = $_SESSION["name"];
     $LastName = $_SESSION["lastname"];
     $Login = $_SESSION["login"];
+
 ?>
 
 <!DOCTYPE html>
@@ -185,56 +188,32 @@
 
             <section id="news">
                 <div class="newsParent">
-                    <div class="newsChild">
-                        <div class="contentImage">
-                            <img src="img/portfolio1.jpg">
-                        </div>
-                        <div class="contentMain">
-                            <div>
-                                <h2>Mexico</h2>
+                    <?php while($row = mysqli_fetch_array($result)) {  ?>
+                        <div class="newsChild">
+                            <div class="contentImage">
+                                <img src="img/<?php echo $row["file"] ?>">
                             </div>
-                            <div>
-                                <p>Hackers leak thousands of Defense Ministry documents The leak also revealed details of past security debacles President López Obrador has confirmed that an international group of hackers stole thousands of emails from the IT system of the Ministry of National Defense (Sedena).</p>
+                            <div class="contentMain">
+                                <div>
+                                    <h2><?php echo $row["header"] ?></h2>
+                                </div>
+                                <div>
+                                    <p><?php echo $row["description"] ?></p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="newsChild">
-                        <div class="contentImage">
-                            <img src="img/portfolio2.webp">
-                        </div>
-                        <div class="contentMain">
-                            <div>
-                                <h2>USA New York</h2>
+                            <div class="settings">
+                                <i class="fa-solid fa-gear"></i>
                             </div>
-                            <div>
-                                <p>Man shot dead in New York hotel bomb making materials found in room NEW YORK - Police in Poughkeepsie say a man was shot to death early Sunday in a hotel. A 911 call came in at about 7:30 a.m. of a disturbance at the Courtyard by Marriott on South Road.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="newsChild">
-                        <div class="contentImage">
-                            <img src="img/portfolio3.jpg">
-                        </div>
-                        <div class="contentMain">
-                            <div>
-                                <h2>Armenian News</h2>
-                            </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiat perspiciatis, quae blanditiis aut odio sapiente, nemo veniam modi ad facilis nesciunt dolor numquam vero odit quaerat alias. Rerum, vel.</p>
+                            <div class="contentEdit">
+                                <a href="create.php?edit=<?php echo $row["id"]?>" class="edit">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a>
+                                <a href="create.php?del=<?php echo $row["id"]?>" class="delete">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="settings">
-                            <i class="fa-solid fa-gear"></i>
-                        </div>
-                        <div class="contentEdit">
-                            <a href="#" class="edit">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </a>
-                            <a href="#" class="delete">
-                                <i class="fa-regular fa-trash-can"></i>
-                            </a>
-                        </div>
-                    </div> -->
+                    <?php } ?>
                 </div>
             </section>
         </main>
