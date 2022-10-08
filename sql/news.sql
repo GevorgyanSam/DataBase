@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 05 2022 г., 15:35
--- Версия сервера: 10.4.21-MariaDB
--- Версия PHP: 8.0.10
+-- Время создания: Окт 08 2022 г., 15:50
+-- Версия сервера: 10.4.25-MariaDB
+-- Версия PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,8 +39,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `header`, `description`, `file`) VALUES
-(1, 'News', 'News For People', '1.jpg'),
-(3, 'News', 'Another News', 'Screenshot (15).png');
+(15, 'https://cssbattle.dev', 'Code Part of https:/cssbattle.dev with 100% progres', 'Снимок экрана (10).png'),
+(16, 'https://cssbattle.dev', 'Code Part of https:/cssbattle.dev with 100% progres', 'Снимок экрана (11).png');
 
 --
 -- Индексы сохранённых таблиц
@@ -60,7 +60,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

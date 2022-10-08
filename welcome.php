@@ -1,8 +1,6 @@
 <?php
     include("config.php") ;
 
-   
-
     if(!isset($_SESSION["name"]) && !isset($_SESSION["lastname"])) {
         header("Location: index.php");
     }

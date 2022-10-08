@@ -108,11 +108,11 @@
                 </div>
                 <div>
                     <input type="text" id="header" name="header" placeholder="Header" value="<?php echo $UpdateHeader?>">
-                    <p class="headerError"><?=$headerErr?></p>
+                    <p class="headerError"><?php echo $headerErr?></p>
                 </div>
                 <div>
                     <textarea name="description" id="description" placeholder="Description"><?php echo $UpdateDescription?></textarea>
-                    <p class="descriptionError"><?=$descriptionErr?></p>
+                    <p class="descriptionError"><?php echo $descriptionErr?></p>
                 </div>
                 <div class="fileParent">
                     <label for="file"><?php echo $imageLabelName ?> An Image</label>
