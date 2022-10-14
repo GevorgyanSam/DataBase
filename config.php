@@ -23,6 +23,7 @@
 
     if(isset($_POST["create"])) {
 
+        $UserLogin = "Created By " . $_SESSION["login"];
         $imageLabelName = "Select";
 
         if(empty($_POST["header"])) {
@@ -45,7 +46,7 @@
 
         if($header != "" && $description != "" && isset($image)) {
 
-            $result = mysqli_query($conn, "INSERT INTO `news` (`id`, `header`, `description`, `file`) VALUES (NULL, '$header', '$description', '$image')");
+            $result = mysqli_query($conn, "INSERT INTO `news` (`id`, `header`, `description`, `file`, `author`) VALUES (NULL, '$header', '$description', '$image', '$UserLogin')");
 
             if($result) {
                 move_uploaded_file($_FILES["file"]["tmp_name"], "img/$image");

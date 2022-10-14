@@ -210,6 +210,9 @@
                                     <i class="fa-regular fa-trash-can"></i>
                                 </a>
                             </div>
+                            <div class="contentAuthor" title="Author">
+                                <p><?php echo $row["author"]; ?></p>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>

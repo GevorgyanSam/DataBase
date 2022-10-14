@@ -292,7 +292,6 @@ body {
         justify-content: flex-start;
         padding: 35px;
         position: relative;
-        overflow: hidden;
         &::before {
             content: "";
             position: absolute;
@@ -374,6 +373,20 @@ body {
                 visibility: visible;
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        .contentAuthor {
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+            transition: var(--transition);
+
+            p {
+                color: var(--color);
+                font-size: 16px;
+                transition: var(--transition);
+                font-family: var(--font-family-2);
+                letter-spacing: 1px;
             }
         }
     }

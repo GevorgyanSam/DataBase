@@ -18,6 +18,7 @@
         $headerLabelName = "Update";
         $edit_state = true;
         $id = $_GET["edit"];
+        $UserLogin = "Updated By " . $_SESSION["login"];
 
         $result = mysqli_query($conn, "SELECT * FROM `news` WHERE `id` = $id");
         $record = mysqli_fetch_array($result);
@@ -32,7 +33,7 @@
             $sendAlreadyUpdatedDescription = mysqli_real_escape_string($conn, $_POST["description"]);
             $sendAlreadyUpdatedFile = mysqli_real_escape_string($conn, $_FILES["file"]["name"]);
 
-            $result = mysqli_query($conn, "UPDATE `news` SET `header` = '$sendAlreadyUpdatedHeader', `description` = '$sendAlreadyUpdatedDescription', `file` = '$sendAlreadyUpdatedFile' WHERE `id` = '$id'");
+            $result = mysqli_query($conn, "UPDATE `news` SET `header` = '$sendAlreadyUpdatedHeader', `description` = '$sendAlreadyUpdatedDescription', `file` = '$sendAlreadyUpdatedFile', `author` = '$UserLogin' WHERE `id` = '$id'");
     
             if($result) {
                 move_uploaded_file($_FILES["file"]["tmp_name"], "img/$sendAlreadyUpdatedFile");
