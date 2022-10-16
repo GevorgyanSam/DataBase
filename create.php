@@ -29,15 +29,31 @@
 
         if(isset($_POST["update"])) {
 
-            $sendAlreadyUpdatedHeader = mysqli_real_escape_string($conn, $_POST["header"]);
-            $sendAlreadyUpdatedDescription = mysqli_real_escape_string($conn, $_POST["description"]);
-            $sendAlreadyUpdatedFile = mysqli_real_escape_string($conn, $_FILES["file"]["name"]);
+            if(empty($_POST["header"])) {
+                $headerErr = "Please Enter The Header";
+            } else {
+                $sendAlreadyUpdatedHeader = mysqli_real_escape_string($conn, $_POST["header"]);
+            }
 
-            $result = mysqli_query($conn, "UPDATE `news` SET `header` = '$sendAlreadyUpdatedHeader', `description` = '$sendAlreadyUpdatedDescription', `file` = '$sendAlreadyUpdatedFile', `author` = '$UserLogin' WHERE `id` = '$id'");
-    
-            if($result) {
-                move_uploaded_file($_FILES["file"]["tmp_name"], "img/$sendAlreadyUpdatedFile");
-                header("Location: welcome.php");
+            if(empty($_POST["description"])) {
+                $descriptionErr = "Please Enter A Description";
+            } else {
+                $sendAlreadyUpdatedDescription = mysqli_real_escape_string($conn, $_POST["description"]);
+            }
+
+            if(empty($_FILES["file"]["name"])) {
+                $fileErr = "Please Select An Image";
+            } else {
+                $sendAlreadyUpdatedFile = mysqli_real_escape_string($conn, $_FILES["file"]["name"]);
+            }
+
+            if(isset($sendAlreadyUpdatedHeader) && isset($sendAlreadyUpdatedDescription) && isset($sendAlreadyUpdatedFile)) {
+                $result = mysqli_query($conn, "UPDATE `news` SET `header` = '$sendAlreadyUpdatedHeader', `description` = '$sendAlreadyUpdatedDescription', `file` = '$sendAlreadyUpdatedFile', `author` = '$UserLogin' WHERE `id` = '$id'");
+
+                if($result) {
+                    move_uploaded_file($_FILES["file"]["tmp_name"], "dbimg/$sendAlreadyUpdatedFile");
+                    header("Location: welcome.php");
+                }
             }
 
         }

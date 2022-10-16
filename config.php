@@ -49,7 +49,7 @@
             $result = mysqli_query($conn, "INSERT INTO `news` (`id`, `header`, `description`, `file`, `author`) VALUES (NULL, '$header', '$description', '$image', '$UserLogin')");
 
             if($result) {
-                move_uploaded_file($_FILES["file"]["tmp_name"], "img/$image");
+                move_uploaded_file($_FILES["file"]["tmp_name"], "dbimg/$image");
                 header("Location: welcome.php");
             }
             

@@ -189,7 +189,7 @@
                     <?php while($row = mysqli_fetch_array($result)) {  ?>
                         <div class="newsChild">
                             <div class="contentImage">
-                                <img src="img/<?php echo $row["file"] ?>">
+                                <img src="dbimg/<?php echo $row["file"] ?>">
                             </div>
                             <div class="contentMain">
                                 <div>
