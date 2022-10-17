@@ -124,11 +124,11 @@
                     <input type="hidden" name="id">
                 </div>
                 <div>
-                    <input type="text" id="header" name="header" placeholder="Header" value="<?php echo $UpdateHeader?>">
+                    <input type="text" id="header" name="header" placeholder="Header" value="<?php if(isset($_GET["edit"])) {echo $UpdateHeader;} else {echo $header;} ?>">
                     <p class="headerError"><?php echo $headerErr?></p>
                 </div>
                 <div>
-                    <textarea name="description" id="description" placeholder="Description"><?php echo $UpdateDescription?></textarea>
+                    <textarea name="description" id="description" placeholder="Description"><?php if(isset($_GET["edit"])) {echo $UpdateDescription;} else {echo $description;} ?></textarea>
                     <p class="descriptionError"><?php echo $descriptionErr?></p>
                 </div>
                 <div class="fileParent">
